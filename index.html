@@ -1,8 +1,217 @@
-<html>
-  <head>
-    <title>website</title>
-  </head>
-  <body>
-    <h1>prueba</h1>
-  </body>
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gesaigeomática — Soluciones en geomática</title>
+  <meta name="description" content="Gesaigeomática: levantamientos topográficos, subdivisiones, loteos y asesoría técnica integral. Sitio principal en gesaigeomatica.cl" />
+  <link rel="canonical" href="https://www.gesaigeomatica.cl/" />
+  <style>
+    /* Estilo sobrio, sin fuentes externas (funciona en GitHub Pages o cualquier hosting estático) */
+    :root{
+      --bg:#f6f7f9;
+      --card:#ffffff;
+      --accent:#0b5b7a;
+      --muted:#6b7280;
+      --radius:14px;
+      --maxw:880px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: linear-gradient(180deg, var(--bg), #eef1f4 60%);
+      color:#111827;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:24px;
+    }
+    .card{
+      background:var(--card);
+      width:100%;
+      max-width:var(--maxw);
+      border-radius:var(--radius);
+      box-shadow: 0 8px 30px rgba(16,24,40,0.08);
+      padding:32px;
+      display:grid;
+      grid-template-columns: 1fr 320px;
+      gap:28px;
+      align-items:center;
+    }
+    @media (max-width:780px){
+      .card{grid-template-columns:1fr; padding:20px;}
+    }
+    .brand {
+      display:flex;
+      gap:16px;
+      align-items:center;
+    }
+    .logo{
+      width:64px;
+      height:64px;
+      border-radius:10px;
+      background:linear-gradient(135deg,#e6f3f6,#dff0f3);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:700;
+      color:var(--accent);
+      font-size:22px;
+      border:1px solid rgba(11,91,122,0.06);
+    }
+    h1{
+      margin:6px 0 6px 0;
+      font-size:20px;
+      letter-spacing:-0.2px;
+    }
+    p.lead{
+      margin:0 0 14px 0;
+      color:var(--muted);
+      line-height:1.5;
+    }
+    ul.services{
+      margin:12px 0 0 0;
+      padding:0;
+      list-style:none;
+      color:var(--muted);
+      display:grid;
+      gap:8px;
+    }
+    ul.services li::before{
+      content: "•";
+      color:var(--accent);
+      display:inline-block;
+      width:18px;
+      margin-left: -18px;
+    }
+
+    .cta {
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+      align-items:stretch;
+    }
+    .visit-btn{
+      display:inline-block;
+      text-decoration:none;
+      text-align:center;
+      padding:12px 14px;
+      border-radius:10px;
+      background:var(--accent);
+      color:white;
+      font-weight:600;
+      box-shadow: 0 6px 18px rgba(11,91,122,0.18);
+    }
+    .secondary{
+      text-align:center;
+      color:var(--muted);
+      font-size:14px;
+    }
+    .meta{
+      font-size:13px;
+      color:var(--muted);
+      background: #fbfdfe;
+      padding:10px;
+      border-radius:10px;
+      border:1px solid rgba(11,91,122,0.04);
+    }
+    .countdown{
+      font-weight:700;
+      color:var(--accent);
+    }
+    footer.small{
+      margin-top:18px;
+      font-size:13px;
+      color:var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <main class="card" role="main" aria-labelledby="title">
+    <section>
+      <div class="brand" aria-hidden="true">
+        <div class="logo">G</div>
+        <div>
+          <div style="font-size:13px;color:var(--muted);">Gesaigeomática</div>
+          <h1 id="title">Soluciones profesionales en geomática y gestión territorial</h1>
+        </div>
+      </div>
+
+      <p class="lead">
+        Levantamientos topográficos, subdivisiones y loteos, cartografía y asesoría técnica integral para proyectos urbanos y rurales.
+        Combinamos experiencia técnica y tecnología para entregar resultados precisos y apoyo en trámites y ventas.
+      </p>
+
+      <ul class="services" aria-label="Servicios principales">
+        <li>Levantamientos topográficos y georreferenciación</li>
+        <li>Subdivisiones, loteos y asesoría normativa</li>
+        <li>Cartografía, drones y fotografías aéreas</li>
+        <li>Gestión de trámites y apoyo en ventas</li>
+      </ul>
+
+      <p class="small meta" style="margin-top:16px;">
+        Página de presentación — puerta de entrada a nuestro sitio principal.
+      </p>
+
+      <p class="small footer" style="margin-top:12px;">
+        ¿Necesitas contacto directo? <span style="color:var(--muted)">Escribe a contacto@gesaigeomatica.cl</span>
+      </p>
+    </section>
+
+    <aside class="cta" aria-label="Acciones principales">
+      <a class="visit-btn" id="visit" href="https://www.gesaigeomatica.cl/" rel="nofollow noopener noreferrer">
+        Ir al sitio principal
+      </a>
+
+      <div class="secondary" id="countdownWrap">
+        Serás redirigido en <span class="countdown" id="count">8</span> segundos.
+        <div style="margin-top:10px;">
+          <button id="stay" style="background:transparent;border:0;color:var(--muted);text-decoration:underline;cursor:pointer;font-size:13px;">Mantenerme aquí</button>
+        </div>
+      </div>
+
+      <div class="meta" style="text-align:center;">
+        <strong>Gesaigeomática</strong><br/>
+        Levantamientos · Subdivisiones · Cartografía
+      </div>
+    </aside>
+
+  </main>
+
+  <script>
+    // Redirección automática con contador — puedes quitar o comentar este bloque si no quieres redirección.
+    (function(){
+      var seconds = 8;
+      var countEl = document.getElementById('count');
+      var wrap = document.getElementById('countdownWrap');
+      var visit = document.getElementById('visit');
+      var stay = document.getElementById('stay');
+      var timerId;
+
+      function tick(){
+        seconds--;
+        countEl.textContent = seconds;
+        if(seconds <= 0){
+          clearInterval(timerId);
+          window.location.href = visit.href;
+        }
+      }
+
+      timerId = setInterval(tick, 1000);
+
+      // Si el usuario quiere quedarse — cancela la redirección
+      stay.addEventListener('click', function(){
+        clearInterval(timerId);
+        wrap.innerHTML = '<span style="color:var(--muted)">Redirección cancelada. Usa el botón para visitar el sitio cuando quieras.</span>';
+      });
+
+      // Si el usuario usa teclado para activar el botón "Ir al sitio" — cancelamos el timer para evitar doble navegación
+      visit.addEventListener('click', function(){ clearInterval(timerId); });
+    }());
+  </script>
+</body>
 </html>
